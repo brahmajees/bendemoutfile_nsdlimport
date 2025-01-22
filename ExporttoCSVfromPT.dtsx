@@ -1,0 +1,2135 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/19/2023 10:51:07 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VCCIPL-TECH"
+  DTS:CreatorName="VCCIPL-TECH\ventu"
+  DTS:DTSID="{551851F5-755B-4BFC-9EB2-7E9FC064863A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5314.0"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="ExporttoCSVfromPT"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{C8FE217B-3375-4566-86BF-FA229F6201BD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{80A1764F-BFC5-4E77-AE9B-5D69F89CCFDD}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\bendata\aa.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F6583AF5-888E-4DB0-829A-B8505F3E6DD1}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="FixedWidth"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\bendata\aa1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="1000"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REM"
+              DTS:DTSID="{5C2714F5-2C47-442E-92AF-FA46B47B5C8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="8"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DP_ID"
+              DTS:DTSID="{787BB647-3656-4536-8507-A03080270B60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="8"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client_ID"
+              DTS:DTSID="{9F7D8B43-28A9-4E12-A88B-EC0F24B5245F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="250"
+              DTS:MaximumWidth="250"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First_holder_Name"
+              DTS:DTSID="{98763C37-4EF3-4C7D-B9DC-5D224C21D0E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="30"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First_Holder_PAN"
+              DTS:DTSID="{E565C1C2-07D7-4C3E-B3FF-F6330B1B38F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="8"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First_Holder_PAN_status"
+              DTS:DTSID="{793B9027-FA86-4314-BC5D-A94C92C5C0D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="45"
+              DTS:MaximumWidth="45"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Second_Holder_Name"
+              DTS:DTSID="{40FA96E2-C323-434C-9E32-00DE1A7856BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="30"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Second_Holder_PAN"
+              DTS:DTSID="{5C158061-8096-45C3-AD3C-EABA3B9453A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="8"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Second_Holder_PAN_status"
+              DTS:DTSID="{33AC6C77-7672-493A-860F-B580DD93CF5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Filler09"
+              DTS:DTSID="{6BA6CF0F-2DF4-43EE-BDAB-AC075D7BB546}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="45"
+              DTS:MaximumWidth="45"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Third_Holder_Name"
+              DTS:DTSID="{0234C40B-61DC-47B2-9879-8312E20C9626}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="30"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Third_Holder_PAN"
+              DTS:DTSID="{9F1C4315-41F6-4E2C-8E2A-F6A15AA11573}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="8"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Third_Holder_PAN_status"
+              DTS:DTSID="{4B7887AA-6D78-40F8-A057-91E37D38D62C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="10"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Minor_indicator"
+              DTS:DTSID="{197A4619-11B3-4FAC-A891-730ADAA01256}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="10"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nominee_Guardian_Indicator"
+              DTS:DTSID="{F1971BC5-42EA-4DCA-9DF4-FEA497938C35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="45"
+              DTS:MaximumWidth="45"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nominee_Guardian_Name"
+              DTS:DTSID="{5EEB384B-3CBD-4245-98AF-4AE2385E3FC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="13"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client_Account_Status"
+              DTS:DTSID="{C73DFA84-F7B0-4D77-8618-C9B5B440FBC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="13"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Account_Category"
+              DTS:DTSID="{06723FEF-8572-4B91-89A0-F04C547B1A8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="5"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Account_Type"
+              DTS:DTSID="{83584E8C-23FF-44F0-839C-D2EF2214DFDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="8"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Account_Sub_Type"
+              DTS:DTSID="{E2407079-5DA1-4D58-AD58-85C7377E83B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="16"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ahdealingewhreceipt"
+              DTS:DTSID="{161F7D65-CBDF-4ABA-A138-2BFD78BE27CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="50"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="present_status"
+              DTS:DTSID="{77A043D4-9EC3-4E12-BFED-BAD87C2F29A2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[VCCIPL-TECH\VENTURESQLEXP.vccipl.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7C17E665-CA55-41FD-AA88-A0D895CC1F92}"
+      DTS:ObjectName="VCCIPL-TECH\VENTURESQLEXP.vccipl.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=VCCIPL-TECH\VENTURESQLEXP;User ID=sa;Initial Catalog=vccipl;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvR6MZ8aG6kmJrhq2UQ06EgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACs+/TvqwmElj+sWZzn8SprJUflwtH9r5UO4lRCPuEh9QAAAAAOgAAAAAIAACAAAACY4xfR1kmK2EPugvjrfC3ncTZYE8/137SdKn/RaQvcASAAAAC/ADQHJoPvIXAC9cpxBLOk5FL23Xfiw+Frshobj3XCukAAAACmdvwhi5HtSJ27Zc5GjrPpPekOGFl1fa+ZsQavm9/oCVBBAQiu51RGOpOZrh8Aoz6WwmzPqMY6546Y4Oz7j6Ik</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT FOR EXPORT TO CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4D79FEAD-A905-4923-BC94-7D0A09445AB9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT FOR EXPORT TO CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT FOR EXPORT TO CSV\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[DP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="DP_ID"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[DP_ID]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Client_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Client_ID"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_ID]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[First_holder_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="First_holder_Name"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_holder_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[First_Holder_PAN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="First_Holder_PAN"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[First_Holder_PAN_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="First_Holder_PAN_status"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN_status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Second_Holder_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="45"
+                      cachedName="Second_Holder_Name"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Second_Holder_PAN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Second_Holder_PAN"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Second_Holder_PAN_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Second_Holder_PAN_status"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN_status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Third_Holder_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="45"
+                      cachedName="Third_Holder_Name"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Third_Holder_PAN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Third_Holder_PAN"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Third_Holder_PAN_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Third_Holder_PAN_status"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN_status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Minor_indicator]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Minor_indicator"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minor_indicator]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Nominee_Guardian_Indicator]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Nominee_Guardian_Indicator"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Indicator]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Nominee_Guardian_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="45"
+                      cachedName="Nominee_Guardian_Name"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Client_Account_Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="Client_Account_Status"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_Account_Status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Account_Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="Account_Category"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Category]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Account_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Account_Type"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Type]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Account_Sub_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Account_Sub_Type"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Sub_Type]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Ahdealingewhreceipt]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="Ahdealingewhreceipt"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ahdealingewhreceipt]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input].Columns[present_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="present_status"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[present_status]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DP_ID]"
+                      name="Copy of DP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[DP_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client_ID]"
+                      name="Copy of Client_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First_holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First_holder_Name]"
+                      name="Copy of First_holder_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_holder_Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First_Holder_PAN]"
+                      name="Copy of First_Holder_PAN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First_Holder_PAN_status]"
+                      name="Copy of First_Holder_PAN_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN_status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Second_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Second_Holder_Name]"
+                      name="Copy of Second_Holder_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Second_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Second_Holder_PAN]"
+                      name="Copy of Second_Holder_PAN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Second_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Second_Holder_PAN_status]"
+                      name="Copy of Second_Holder_PAN_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN_status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Third_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Third_Holder_Name]"
+                      name="Copy of Third_Holder_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Third_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Third_Holder_PAN]"
+                      name="Copy of Third_Holder_PAN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Third_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Third_Holder_PAN_status]"
+                      name="Copy of Third_Holder_PAN_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN_status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Minor_indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Minor_indicator]"
+                      name="Copy of Minor_indicator"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minor_indicator]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nominee_Guardian_Indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nominee_Guardian_Indicator]"
+                      name="Copy of Nominee_Guardian_Indicator"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Indicator]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nominee_Guardian_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nominee_Guardian_Name]"
+                      name="Copy of Nominee_Guardian_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client_Account_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="13"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client_Account_Status]"
+                      name="Copy of Client_Account_Status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_Account_Status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account_Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="13"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account_Category]"
+                      name="Copy of Account_Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account_Type]"
+                      name="Copy of Account_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account_Sub_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account_Sub_Type]"
+                      name="Copy of Account_Sub_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Sub_Type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ahdealingewhreceipt]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="16"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ahdealingewhreceipt]"
+                      name="Copy of Ahdealingewhreceipt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ahdealingewhreceipt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of present_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of present_status]"
+                      name="Copy of present_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[present_status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[DP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="DP_ID"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DP_ID]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[DP_ID]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Client_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Client_ID"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Client_ID]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_ID]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[First_holder_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="First_holder_Name"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First_holder_Name]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_holder_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[First_Holder_PAN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="First_Holder_PAN"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First_Holder_PAN]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[First_Holder_PAN_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="First_Holder_PAN_status"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First_Holder_PAN_status]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN_status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Second_Holder_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="45"
+                      cachedName="Second_Holder_Name"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Second_Holder_Name]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Second_Holder_PAN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Second_Holder_PAN"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Second_Holder_PAN]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Second_Holder_PAN_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Second_Holder_PAN_status"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Second_Holder_PAN_status]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN_status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Filler09]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="Filler09"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Filler09]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Filler09]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Third_Holder_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="45"
+                      cachedName="Third_Holder_Name"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Third_Holder_Name]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Third_Holder_PAN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Third_Holder_PAN"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Third_Holder_PAN]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Third_Holder_PAN_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Third_Holder_PAN_status"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Third_Holder_PAN_status]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN_status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Minor_indicator]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Minor_indicator"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Minor_indicator]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minor_indicator]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Nominee_Guardian_Indicator]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Nominee_Guardian_Indicator"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Nominee_Guardian_Indicator]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Indicator]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Nominee_Guardian_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="45"
+                      cachedName="Nominee_Guardian_Name"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Nominee_Guardian_Name]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Name]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Client_Account_Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="Client_Account_Status"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Client_Account_Status]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_Account_Status]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Account_Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="Account_Category"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Account_Category]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Category]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Account_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Account_Type"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Account_Type]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Type]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Account_Sub_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Account_Sub_Type"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Account_Sub_Type]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Sub_Type]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Ahdealingewhreceipt]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="Ahdealingewhreceipt"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Ahdealingewhreceipt]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ahdealingewhreceipt]" />
+                    <inputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[present_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="present_status"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[present_status]"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[present_status]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[REM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="REM" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="DP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Client_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Client_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First_holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="First_holder_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="First_Holder_PAN" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="First_Holder_PAN_status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Second_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      name="Second_Holder_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Second_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Second_Holder_PAN" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Second_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Second_Holder_PAN_status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Filler09]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler09" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Third_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      name="Third_Holder_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Third_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Third_Holder_PAN" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Third_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Third_Holder_PAN_status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Minor_indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Minor_indicator" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Nominee_Guardian_Indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Nominee_Guardian_Indicator" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Nominee_Guardian_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      name="Nominee_Guardian_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Client_Account_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="Client_Account_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Account_Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="Account_Category" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Account_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Account_Type" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Account_Sub_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Account_Sub_Type" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Ahdealingewhreceipt]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="Ahdealingewhreceipt" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[present_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="present_status" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[bendem630_dt]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VCCIPL-TECH\VENTURESQLEXP.vccipl.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[VCCIPL-TECH\VENTURESQLEXP.vccipl.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[REM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REM]"
+                      length="1000"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[REM]"
+                      name="REM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[DP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DP_ID]"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[DP_ID]"
+                      name="DP_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Client_ID]"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_ID]"
+                      name="Client_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First_holder_Name]"
+                      length="250"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_holder_Name]"
+                      name="First_holder_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First_Holder_PAN]"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN]"
+                      name="First_Holder_PAN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First_Holder_PAN_status]"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[First_Holder_PAN_status]"
+                      name="First_Holder_PAN_status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Second_Holder_Name]"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_Name]"
+                      name="Second_Holder_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Second_Holder_PAN]"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN]"
+                      name="Second_Holder_PAN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Second_Holder_PAN_status]"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Second_Holder_PAN_status]"
+                      name="Second_Holder_PAN_status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Filler09]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler09]"
+                      length="2"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Filler09]"
+                      name="Filler09"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Third_Holder_Name]"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_Name]"
+                      name="Third_Holder_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Third_Holder_PAN]"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN]"
+                      name="Third_Holder_PAN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Third_Holder_PAN_status]"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Third_Holder_PAN_status]"
+                      name="Third_Holder_PAN_status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minor_indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Minor_indicator]"
+                      length="10"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Minor_indicator]"
+                      name="Minor_indicator"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nominee_Guardian_Indicator]"
+                      length="10"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Indicator]"
+                      name="Nominee_Guardian_Indicator"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nominee_Guardian_Name]"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nominee_Guardian_Name]"
+                      name="Nominee_Guardian_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_Account_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Client_Account_Status]"
+                      length="13"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Client_Account_Status]"
+                      name="Client_Account_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Account_Category]"
+                      length="13"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Category]"
+                      name="Account_Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Account_Type]"
+                      length="5"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Type]"
+                      name="Account_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Sub_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Account_Sub_Type]"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Account_Sub_Type]"
+                      name="Account_Sub_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ahdealingewhreceipt]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Ahdealingewhreceipt]"
+                      length="16"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ahdealingewhreceipt]"
+                      name="Ahdealingewhreceipt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[present_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[present_status]"
+                      length="50"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[present_status]"
+                      name="present_status"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="REM" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler01]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler01" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="DP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler02]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler02" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Client_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Client_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler03]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler03" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First_holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="First_holder_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler04]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler04" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="First_Holder_PAN" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler05]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler05" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="First_Holder_PAN_status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler06]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler06" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Second_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      name="Second_Holder_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler07]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler07" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Second_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Second_Holder_PAN" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler08]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler08" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Second_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Second_Holder_PAN_status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler09]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler09" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Third_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      name="Third_Holder_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler10]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler10" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Third_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Third_Holder_PAN" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler11]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler11" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Third_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Third_Holder_PAN_status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler12]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler12" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Minor_indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Minor_indicator" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler13]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler13" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nominee_Guardian_Indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Nominee_Guardian_Indicator" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler14]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler14" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nominee_Guardian_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      name="Nominee_Guardian_Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler15]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler15" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Client_Account_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="Client_Account_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler16]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler16" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Account_Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="Account_Category" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler17]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler17" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Account_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Account_Type" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler18]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler18" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Account_Sub_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Account_Sub_Type" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler19]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler19" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Ahdealingewhreceipt]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="Ahdealingewhreceipt" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Filler20]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="Filler20" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[masteruniqno]"
+                      dataType="i4"
+                      name="masteruniqno" />
+                    <externalMetadataColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[present_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="present_status" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REM]"
+                      name="REM" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DP_ID]"
+                      name="DP_ID" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Client_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Client_ID]"
+                      name="Client_ID" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First_holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First_holder_Name]"
+                      name="First_holder_Name" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First_Holder_PAN]"
+                      name="First_Holder_PAN" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First_Holder_PAN_status]"
+                      name="First_Holder_PAN_status" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Second_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Second_Holder_Name]"
+                      name="Second_Holder_Name" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Second_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Second_Holder_PAN]"
+                      name="Second_Holder_PAN" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Second_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Second_Holder_PAN_status]"
+                      name="Second_Holder_PAN_status" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Filler09]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Filler09]"
+                      name="Filler09" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Third_Holder_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Third_Holder_Name]"
+                      name="Third_Holder_Name" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Third_Holder_PAN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Third_Holder_PAN]"
+                      name="Third_Holder_PAN" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Third_Holder_PAN_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Third_Holder_PAN_status]"
+                      name="Third_Holder_PAN_status" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Minor_indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Minor_indicator]"
+                      name="Minor_indicator" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nominee_Guardian_Indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nominee_Guardian_Indicator]"
+                      name="Nominee_Guardian_Indicator" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nominee_Guardian_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="45"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nominee_Guardian_Name]"
+                      name="Nominee_Guardian_Name" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Client_Account_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Client_Account_Status]"
+                      name="Client_Account_Status" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Account_Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Account_Category]"
+                      name="Account_Category" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Account_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Account_Type]"
+                      name="Account_Type" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Account_Sub_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Account_Sub_Type]"
+                      name="Account_Sub_Type" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Ahdealingewhreceipt]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Ahdealingewhreceipt]"
+                      name="Ahdealingewhreceipt" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[present_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[present_status]"
+                      name="present_status" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT FOR EXPORT TO CSV.Paths[Data Conversion Output]"
+              endId="Package\DFT FOR EXPORT TO CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT FOR EXPORT TO CSV.Paths[OLE DB Source Output]"
+              endId="Package\DFT FOR EXPORT TO CSV\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT FOR EXPORT TO CSV\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="202,42"
+          Id="Package\DFT FOR EXPORT TO CSV"
+          TopLeft="59,38" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT FOR EXPORT TO CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DFT FOR EXPORT TO CSV\OLE DB Source"
+          TopLeft="37,17" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\DFT FOR EXPORT TO CSV\Flat File Destination"
+          TopLeft="33,161" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT FOR EXPORT TO CSV\Data Conversion"
+          TopLeft="245,88" />
+        <EdgeLayout
+          Id="Package\DFT FOR EXPORT TO CSV.Paths[OLE DB Source Output]"
+          TopLeft="112,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="211,29"
+              Start="0,0"
+              End="211,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="4,14.5" />
+                  <mssgle:LineSegment
+                    End="207,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="207,14.5"
+                    Point2="211,14.5"
+                    Point3="211,18.5" />
+                  <mssgle:LineSegment
+                    End="211,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="97.5,19.5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT FOR EXPORT TO CSV.Paths[Data Conversion Output]"
+          TopLeft="323,130">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-204,31"
+              Start="0,0"
+              End="-204,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="-4,15.5" />
+                  <mssgle:LineSegment
+                    End="-200,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-200,15.5"
+                    Point2="-204,15.5"
+                    Point3="-204,19.5" />
+                  <mssgle:LineSegment
+                    End="-204,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-110,20.5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT FOR EXPORT TO CSV\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
